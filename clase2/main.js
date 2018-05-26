@@ -76,3 +76,40 @@ console.log(miArray);
 //join
 var template = [1,2,3];
 console.log(template); //123
+
+//objetos literales
+var libro = {
+    autor: "Anonimo",
+    paginas: 64,
+    formatos : [],
+    precio: 12000,
+    publicado: true,
+    leer: function () {
+        console.log("He leido el libro");
+    }
+}
+
+libro.autor; //Anonimo
+libro.precio = 8000;
+libro['publicado']; //true
+libro.leer(); //devuelve: "he leido el libro"
+
+// crear objetos
+var miObjeto = {propiedad: "valor", metodo: function(){} };
+var miObjeto = new Object({propiedad: "valor", metodo: function(){} });
+
+// anidacion
+var libro = {
+    autor: {
+        nombre: "blah",
+        nacionalidad: "chilena",
+        contacto: {
+            email: "asda@asdasd.com",
+            twitter: "@asdasda"
+        }
+    },
+    editorial: {
+        nombre: "ed Books",
+        web: "http://edbooks.cl"
+    }
+}
