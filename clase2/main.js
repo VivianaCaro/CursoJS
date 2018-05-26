@@ -72,3 +72,7 @@ function agregar(numero){
 console.log(miArray);
 agregar(8);
 console.log(miArray);
+
+//join
+var template = [1,2,3];
+console.log(template); //123
