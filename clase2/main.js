@@ -11,3 +11,64 @@ console.log(dato);
 //console.log(local); //devuelve la función como texto, no la ejecuta!!
 console.log(local());
 console.log(dato); //global, no cambia el valor (ver comentario dentro de funcion)
+
+// this en JS, se refiere al contexto
+/*
+button.addEventListener('click', function(){
+    this.innerText = "nuevo valor"; //this se refiere a button
+})
+*/
+
+/*
+//arreglos array : coleccion de datos
+
+//Creacion literal (separado por comas)
+var miArray = [1,2,3,4]; //array de numeros
+var miArray = ["Ola", "ke", "ase"]; //array de strings
+var miArray = [{propiedad: "valor1"}, {propiedad: "valor2"}]; //array de objetos
+var miArray = [[2,4],[3,6]]; //array de array (matriz)
+var miArray = [1, true, [3,2], "Hola", {clave:"valor"}]; //array mixto
+
+//nueva instancia de la clase Array
+var miArray = new Array();
+
+var miArray = ["uno", "dos", "tres"];
+miArray[1]; //devuelve: "dos"
+
+//si accedemos a una posición que no existe
+miArray[8]; //undefined !!
+
+*/
+
+//Ejercicios
+
+var miArray = [1,2,3,4];
+console.log("Mi elemento es:", miArray[2]); //"3"
+console.log("Mi array tiene ",miArray.length," elementos.");
+
+/* metodos de array
+//.sort(); : de menor a mayor
+miArray.sort();
+
+//pop: devuelve el ultimo elemento del arreglo y lo elimina 
+miArray.pop();
+
+//push: agregar elementos y devuelve la nueva longitud del arreglo
+miArray.push(2);
+
+//reverse: inverte el arreglo
+miArray.reverse();
+*/
+/* ejemplo/ejercicio
+console.log("valor anterior", miArray);
+miArray.push(5);
+console.log("valor actual", miArray);
+*/
+
+function agregar(numero){
+    miArray.push(numero);
+}
+
+console.log(miArray);
+agregar(8);
+console.log(miArray);
