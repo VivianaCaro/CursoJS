@@ -1,0 +1,52 @@
+body,html{
+    background: #f8f8f8;
+}
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    padding: 20px;
+    color: limegreen;
+}
+nav ul li a:hover{
+    color: white;
+    background: #555;
+    border-radius: 100px;
+}
+h1 {
+    text-align: center;
+}
+input {
+    width: 95%;
+    padding: 20x;
+    margin-bottom: 20px;
+}
+label {
+    color: #555;
+}
+button {
+    background: #555;
+    color: #fff;
+    padding: 20px 40px;
+}
+#productosLista {
+    padding: 0;
+}
+#productosLista li {
+    list-style: none;
+    padding: 40px;
+    background: limegreen;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+}
+#productosLista li span {
+    display: inline-block;
+}
+
+#productosLista li span img {
+    max-width: 200px;
+    margin-right: 40px;
+}

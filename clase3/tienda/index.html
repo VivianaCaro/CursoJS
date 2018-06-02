@@ -1,0 +1,30 @@
+<!DOCTYPE html> <!--html5-->
+<html lang="en"> <!--podria no ir, pero sirve para indexar-->
+    <head> <!--datos que no se verán en la página-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width"> <!--agrega responsivo a la página -->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Te tiro el Rasho - Tienda Juegos de Mesa</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <h1>Mi tienda</h1>
+        <nav>
+           <ul>
+               <li>
+                   <a href="index.html">Inicio</a>
+               </li>
+               <li>
+                   <a href="nuevo.html">Agregar producto</a>
+               </li>
+           </ul> 
+        </nav>        
+        <ul id="productosLista"></ul>
+        <!--debe ir abajo por temas de performance (llamados ajax pueden ralentizar la carga de la pagina) -->
+        <script src="funciones.js"></script>
+        <!-- se puede llamar a cualquier funcion que estén en funciones.js -->
+        <script>
+            crearVista(validarStorage());
+        </script>
+    </body>
+</html>
