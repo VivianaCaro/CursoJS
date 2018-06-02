@@ -113,3 +113,6 @@ var libro = {
         web: "http://edbooks.cl"
     }
 }
+
+//acceder
+var email = libro.contacto.email;
