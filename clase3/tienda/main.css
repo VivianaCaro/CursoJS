@@ -38,7 +38,7 @@ button {
 #productosLista li {
     list-style: none;
     padding: 40px;
-    background: limegreen;
+    background: #f8f8f8;
     border: 1px solid #eee;
     margin-bottom: 10px;
 }
