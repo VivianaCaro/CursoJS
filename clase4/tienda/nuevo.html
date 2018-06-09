@@ -1,0 +1,43 @@
+<!DOCTYPE html> <!--html5-->
+<html lang="en"> <!--podria no ir, pero sirve para indexar-->
+    <head> <!--datos que no se verán en la página-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width"> <!--agrega responsivo a la página -->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Te tiro el Rasho - Agregar Productos</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <h1>Nuevo producto</h1>
+        <nav>
+           <ul>
+               <li>
+                   <a href="index.html">Inicio</a>
+               </li>
+               <li>
+                   <a href="nuevo.html">Agregar producto</a>
+               </li>
+           </ul> 
+        </nav>       
+        <br>
+        <section>
+            <label for="">Nombre: </label>
+            <input type="text" placeholder="Nombre" id="nombre">
+
+            <label for="">Descripción: </label>
+            <input type="text" placeholder="Descripcion" id="desc">
+
+            <label for="">Imagen: </label>
+            <input type="text" placeholder="Imagen" id="img">
+
+            <label for="">Precio: </label>
+            <input type="number" placeholder="Precio" id="precio">
+
+            <button id="agregar">Agregar nuevo producto</button>
+        </section>
+        <!--debe ir abajo por temas de performance (llamados ajax pueden ralentizar la carga de la pagina) -->
+        <script src="funciones.js"></script>
+        <script src="producto.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
