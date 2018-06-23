@@ -57,7 +57,11 @@ formulario.keyUp.addEventListener('keyup', function(){
 //target.addEventListener('evento',function(){}); agrega evento al target
 // classList: trae coleccion activa de DOMTokenList de los atributos de clase del elemento
 // element.classList.add(): agrega clases al elemento, si ya existen se ignoran
-
+// element.classList.remove(): eliminar clase de un elemento
+// classList.toggle() : si NO existe la clase, la agrega, SINO, la quita
+// classList.constains() : si existe devuelve true sino false 
+// classList.replace() : reemplaza class actual, por class reemplazo 
+// innerHTML
 
 // Se ejecuta al inicio
 document.addEventListener('DOMContentLoaded', function(){
@@ -78,12 +82,58 @@ document.addEventListener('DOMContentLoaded', function(){
 
     // ejemplos: classList
     console.log(clase.classList);
-    clase.classList.add('segundaClase');
-    console.log(clase.classList);
+    //clase.classList.add('primeraClase');
+    //console.log(clase.classList);
 
     var primeraClase = document.querySelector('.primeraClase');
+    var botonAgregar = document.getElementById('botonAgregar');
 
+    // add
+    botonAgregar.addEventListener('click', function(){
+        primeraClase.classList.add("segundaClase");
+    });
 
+    // remove
+    var botonEliminar = document.querySelector("#botonEliminar");
+
+    botonEliminar.addEventListener('click', function() {
+        primeraClase.classList.remove('segundaClase');
+    });
+
+    // toggle
+    var botonToggle = document.querySelector("#botonToggle");
+
+    botonToggle.addEventListener('click', function() {
+        primeraClase.classList.toggle('segundaClase');
+    });
+
+    // contains
+    var botonContiene = document.querySelector("#botonContiene");
+
+    botonContiene.addEventListener('click', function() {
+        if(primeraClase.classList.contains('segundaClase')) {
+            alert('Contiene Segunda Clase');
+        } else {
+            alert('NO Contiene Segunda Clase');
+        }
+    });
+
+    // con otra notacion
+    document.querySelector("#botonReemplaza").addEventListener('click', function(){
+        primeraClase.classList.replace('primeraClase', 'segundaClase');
+    }); 
+    
+    // innerHTML
+    document.querySelector("#botonBody").addEventListener('click', function(){
+        document.body.innerHTML = `
+            <header>
+                <h1>Nuevo body 8)</h1>
+            </header>`;
+        
+    }); 
+
+    // innerText : mas nuevo
+    // textContent : compatible con navegadores mas antiguos
 });
 
 
