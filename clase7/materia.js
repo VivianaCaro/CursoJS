@@ -27,7 +27,7 @@ El formulario sólo se va a enviar si la funcion validacion retorna true
 // txtNombre == null || txtNombre.length == 0 || /^\s+$/.test(txtNombre) [que comience y termine con espacio]
 
 // Validacion de campos numericos
-// isNaN(valor) || valor == null || valor.length == 0  [isNan => Is Not A Number]
+// isNaN(valor) || valor == null || valor.length == 0  [isNaN => Is Not A Number]
 
 // Validación de campos de correo electrónico
 // valor = document.getElementById("correo").value;

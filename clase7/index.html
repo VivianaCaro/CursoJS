@@ -15,12 +15,12 @@
     </head>
     <body>
         <h1>Validación de Formulario</h1>
-        <form action="" id="formulario">
+        <form action="" id="formulario" onsubmit="return validacion()" novalidate>
             <label for="">Nombre:</label>
-            <input type="text" name="texto" id="">
+            <input type="text" name="nombre" id="">
             <br>
             <label for="">Edad:</label>
-            <input type="number" name="numero" id="">
+            <input type="number" name="edad" id="">
             <br>
             <label for="">Email:</label>
             <input type="email" name="email" id="">
@@ -34,7 +34,7 @@
             <input type="text" name="telefono">
             <br>
             <label for="">Comuna:</label>
-            <select name="" id="">
+            <select name="comuna" id="">
                 <option value="">Seleccionar comuna</option>
                 <option value="">Santiago</option>
                 <option value="">Ñuñoa</option>
@@ -43,7 +43,7 @@
             </select>
             <br>
             <label for="">Términos de contrato</label>
-            <input type="checkbox" name="Terminos" id="" value="Estoy de acuerdo">
+            <input type="checkbox" name="terminos" id="" value="Estoy de acuerdo">
             <br>
             <label for="">Fecha de nacimiento</label>
             <select name="dia" id="">
