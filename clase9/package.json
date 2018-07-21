@@ -1,0 +1,16 @@
+{
+  "name": "clase9",
+  "version": "0.0.1",
+  "description": "Ejemplo de aplicacion en NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Viviana Caro",
+  "license": "MIT",
+  "dependencies": {
+    "connect-multiparty": "^2.1.1",
+    "express": "^4.16.3"
+  }
+}
