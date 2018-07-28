@@ -1,0 +1,29 @@
+Trabajando con módulos
+
+module.exports = {
+    // variables de entorno
+    port: process.env.PORT || 3000
+}
+
+Modularizar la aplicación
+
+El más utilizado es modelo-vista-controlador
+
+controllers,
+middlewares,
+models,
+node_modules,
+routes (routes similar a states de angularjs),
+utils
+
+MongoDB
+
+En base a documentos. Las colecciones son un grupo de documentos, lo que podría asociarse a una tabla o 
+una base de datos pequeña. Son archivos BSON (JSON en binario).
+Es más rápida que una base de datos relacional
+
+Mongoose
+Es un ODM (Objetct Document Mapper). Proporciona funcionalidades para crear y trabajar con esquemas.
+
+MongoLab
+Servicio web para almacenar bases MongoDB en la nube.
