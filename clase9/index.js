@@ -58,6 +58,7 @@ app.get('/api', (req,res) => {
     res.status(200).json(arreglo);
 });
 
+// si creas una url con /api/encontrar/amigos/:algo ... ese "amigos" se lo comerá esta ruta de api, ojo 
 app.get('/api/encontrar/:id', (req,res) => {
     var id = req.params.id;
 
@@ -85,6 +86,37 @@ app.post('/api/guardar', body, (req,res) => {
         mensaje: "Operación exitosa!"
     });
 });
+
+app.delete('/api/eliminar/:id', (req,res) => {
+    var id = req.params.id;
+    
+    arreglo.find((elemento, indice) => {
+        if(elemento.id == id) {
+            return arreglo.splice(indice, 1);
+        }
+    });
+
+    res.status(200).json({
+        mensaje: "Elemento eliminado existosamente!"
+    })
+});
+
+app.put('/api/actualizar/:id', body, (req,res) => {
+    var id = req.params.id;
+
+    var data = {
+        nombre: req.body.nombre,
+        apellido: req.body.apellido,
+        age: req.body.age
+    }
+
+    arreglo.find((e,i) => {
+        if(e.id == id) {
+            data.id = e.id;
+            return arreglo.splice(i, 1, data);
+        }
+    })
+})
 
 // creamos nuestro servidor de Node y Express
 app.listen(5000, error => {
